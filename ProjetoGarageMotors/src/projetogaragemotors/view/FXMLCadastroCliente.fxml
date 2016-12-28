@@ -1,11 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="garagemotors.controller.FXMLCadastroClienteController">
-    
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60" fx:controller="garagemotors.controller.FXMLCadastroClienteController">
+   <children>
+      <Accordion layoutX="14.0" layoutY="14.0" prefHeight="312.0" prefWidth="600.0" AnchorPane.bottomAnchor="88.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <panes>
+          <TitledPane animated="false" text="Dados Principais">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="textFieldNome" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="420.0" promptText="Digite o nome" />
+                        <TextField fx:id="textFieldCpf" layoutX="14.0" layoutY="51.0" prefHeight="25.0" prefWidth="418.0" promptText="Digite o CPF" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Endereço">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="224.0" prefWidth="598.0">
+                     <children>
+                        <TextField fx:id="textFieldLogradouro" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="467.0" promptText="Logradouro" />
+                        <TextField fx:id="textFieldBairro" layoutX="14.0" layoutY="48.0" prefHeight="25.0" prefWidth="217.0" promptText="Bairro" />
+                        <TextField fx:id="textFieldCidade" layoutX="14.0" layoutY="83.0" promptText="Cidade" />
+                        <TextField fx:id="textFieldCep" layoutX="15.0" layoutY="186.0" promptText="CEP" />
+                        <ComboBox fx:id="comboEstado" layoutX="14.0" layoutY="118.0" prefWidth="150.0" promptText="Estado" />
+                        <ComboBox fx:id="comboPais" layoutX="14.0" layoutY="152.0" prefWidth="150.0" promptText="Pais" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+      <Button layoutX="526.0" layoutY="327.0" mnemonicParsing="false" text="Cancelar" />
+      <Button layoutX="461.0" layoutY="327.0" mnemonicParsing="false" text="Limpar" />
+      <Button layoutX="397.0" layoutY="327.0" mnemonicParsing="false" text="Salvar" />
+   </children>
 </AnchorPane>

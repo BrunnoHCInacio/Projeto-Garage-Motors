@@ -5,6 +5,9 @@
  */
 package projetogaragemotors.controller;
 
+import java.sql.SQLException;
+import projetogaragemotors.modelo.ClienteDAO;
+
 /**
  *
  * @author brunn
@@ -19,6 +22,7 @@ public class Cliente {
 
     public Cliente() {
     }
+    
 
     public Cliente(String nome, String cpf) {
         this.nome = nome;
@@ -66,8 +70,8 @@ public class Cliente {
         this.clienteEndereco = clienteEndereco;
     }
     
-    public void save(){
-        
+    public void save()throws SQLException{
+        ClienteDAO.create(this);
     }
     public void search(){
         
